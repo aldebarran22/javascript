@@ -1,0 +1,20 @@
+function mostrar() {
+  // Muestra los datos del empleado.
+  var mensaje;
+
+  mensaje = this.numero + " " + this.nombre + " " + this.departamento;
+  console.log(mensaje);
+}
+
+function Empleado(numero, nombre, departamento) {
+  this.numero = numero;
+  this.nombre = nombre;
+  this.departamento = departamento;
+  this.mostrar = mostrar;
+}
+
+var emp1 = new Empleado(1, "Antonio", "contabilidad");
+var emp2 = new Empleado(2, "Ana", "marketing");
+
+emp1.mostrar();
+emp2.mostrar();
