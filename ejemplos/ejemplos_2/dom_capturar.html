@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        function getRespuesta(pregunta){
+            let opciones = document.getElementsByName(pregunta)
+            for (let op of opciones){
+                if (op.checked) 
+                    return op.value.charAt(1)
+            }
+            return -1
+        }
+
+        window.addEventListener("load", () => {
+            let boton = document.getElementById('boton')
+            boton.addEventListener("click", () => {
+                resp = getRespuesta("1")
+                alert(resp + " de la pregunta 1")
+            }, false)
+        }, false)
+    </script>
+</head>
+<body>
+    <div class="bloque_pregunta">
+        <p><input type="radio" id="A1" name="1" value="1A" />A.break</p>
+        <p><input type="radio" id="B1" name="1" value="1B" />B.continue</p>
+        <p><input type="radio" id="C1" name="1" value="1C" />C.dim</p>
+        <p><input type="radio" id="D1" name="1" value="1D" />D.for</p>
+        <p><input type="radio" id="E1" name="1" value="1E" />E.while</p>
+    </div>	
+    <input type="button" id="boton" name="boton" value="Calcular">
+</body>
+</html>

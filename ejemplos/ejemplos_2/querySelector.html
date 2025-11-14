@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function imprimir(col){
+            try {
+                // Imprime la colección
+                for (let item of col)
+                    console.log(item.firstChild.nodeValue)
+                
+            } catch(err){
+                // Imprime un solo objeto
+                console.log(col.firstChild.nodeValue)
+
+            } finally { 
+                console.log("\n")
+            }
+        }
+
+        window.onload = function() {
+            // Capturar todos los párrafos del container
+            let parrafos = document.querySelectorAll('#container p')
+            imprimir(parrafos)
+
+            // Todos los h1 de la página
+            let h1 = document.getElementsByTagName('h1') // document.querySelectorAll('h1')
+            imprimir(h1)
+
+            // El primer párrafo de clase rojo
+            let rojo = document.querySelector('.rojo')
+            imprimir(rojo)
+
+            // El tercer párrafo rojo:
+            let rojos = document.querySelectorAll('.rojo')
+            if (rojos.length > 2)
+                imprimir(rojos[2])
+
+            // Enlaces del container2
+            let enlaces = document.querySelectorAll('#container2 a')
+            imprimir(enlaces)
+
+            // Todos los encabezados h1 / h2 / ... de la página:
+            let encabezados = document.querySelectorAll('h1, h2, h3, h4, h5, h6') // Selector de grupo CSS
+            imprimir(encabezados)
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Titulo</h1>
+        <h2>Subtitulo</h2>
+        <p>Parrafo1</p>
+        <p>Parrafo2</p>
+        <p class="rojo">Parrafo3</p>
+        <p class="rojo">Parrafo4</p>
+        <a href="#">Enlace1</a>
+    </div>
+    <div id="container2">
+        <h1>Titulo2</h1>
+        <h2>Subtitulo2</h2>
+        <p>Parrafo5</p>
+        <p>Parrafo6</p>
+        <p class="rojo">Parrafo7</p>
+        <p class="rojo">Parrafo8</p>
+        <a href="#">Enlace2</a>
+    </div>
+</body>
+</html>

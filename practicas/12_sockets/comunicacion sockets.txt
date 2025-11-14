@@ -1,0 +1,15 @@
+0 -> un mensaje de bienvenida al usuario que se conecta: type:0, contenido:
+	
+1 -> se ha conectado un nuevo cliente: type:1, nick:xxx
+Se añade al mapa
+Se comunica a todos
+
+2 -> se ha desconectado un nuevo cliente: type:2, nick:xxx
+Se borra del mapa
+Se comunica a todos
+
+3 -> mensaje de origen a destino: type:3, nick:origen, nick2:destino, contenido: mensaje
+Se envia el mensaje solo al destinatario
+
+4 -> mensaje de difusión a todos: type:4, nick:origen, contenido: mensaje
+Se envia el mensaje a todos

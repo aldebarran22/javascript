@@ -1,0 +1,87 @@
+<html>
+<head>
+<script>
+
+var Gato = function (nombre, color, edad) {     
+	this.nombre = nombre;     
+	this.color = color;     
+	this.edad = edad; 
+}
+
+var Gato = function (nombre, color, edad) {
+    var alias;	
+    this.nombre = new String(nombre);
+    this.color = new String(color);
+    this.edad = new Number(edad);
+    //Por ejemplo
+    if (isNaN(this.edad)) {
+        alert("Error en el data-typing, edad no es un numero");
+    }
+
+    this.toString = function(){
+      return this.nombre + " " + this.color + " " + this.edad;		
+    }	
+    this.comer = comerExterna;	
+
+    this.getAlias = function (){
+	return alias;
+    }		
+
+    this.setAlias = function(nuevoAlias){
+        alias = nuevoAlias;
+    }
+}
+
+
+
+function comerExterna(){
+	console.log("El gato " + this.nombre + " esta comiendo");
+}
+
+
+
+
+
+
+var Michi = new Gato("Michifu", "azul", 2);
+console.log(Michi.toString());
+Michi.comer();
+Michi.setAlias("pepe");
+console.log("El alias es :" + Michi.getAlias());
+console.log("nombre: " + Michi['nombre']);
+
+
+// Shape - superclass
+function Shape() {
+  this.x = 0;
+  this.y = 0;
+}
+
+// superclass method
+Shape.prototype.move = function(x, y) {
+    this.x += x;
+    this.y += y;
+    console.info("Shape moved.");
+};
+
+// Rectangle - subclass
+function Rectangle() {
+  Shape.call(this); // call super constructor.
+}
+
+// subclass extends superclass
+Rectangle.prototype = Object.create(Shape.prototype);
+Rectangle.prototype.constructor = Rectangle;
+
+var rect = new Rectangle();
+
+rect instanceof Rectangle // true.
+rect instanceof Shape // true.
+
+rect.move(1, 1); // Outputs, "Shape moved."
+
+</script>
+<body>
+
+</body>
+</html>

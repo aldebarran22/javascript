@@ -1,0 +1,24 @@
+<HTML> <HEAD></HEAD> <BODY>
+Déjame que te diga algunas cosas sobre tu <TT>navigator</TT>: <P>
+<SCRIPT LANGUAGE="JavaScript"> <!--
+var Explorer = navigator.language ? false : true;
+with(document) {
+write('Por una parte, navigator.appCodeName = ' + navigator.appCodeName + '<BR>');
+write('Por otro lado, navigator.appName = ' + navigator.appName + '<BR>');
+write('Además, navigator.appVersion = ' + navigator.appVersion + '<BR>');
+if (Explorer)
+write('Por si fuera poco, navigator.systemLanguage = '
++ navigator.systemLanguage + '<BR>');
+else
+write('Por si fuera poco, navigator.language = '
++ navigator.language + '<BR>');
+write('Y ahí no termina, pues navigator.mimeTypes = '
++ navigator.mimeTypes + '<BR>');
+write('Pero es que también navigator.platform = '
++ navigator.platform + '<BR>');
+write('No olvidemos, por otro lado, que navigator.plugins = '
++ navigator.plugins + '<BR>');
+write('Finalmente, pero no menos importante, navigator.userAgent = '
++ navigator.userAgent);
+}
+//--> </SCRIPT> </BODY> </HTML>

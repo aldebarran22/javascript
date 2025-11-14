@@ -1,0 +1,41 @@
+<html>
+<head>
+
+  <script language='javascript'>
+
+    function addRow(a,b) {
+      var r  = document.createElement('tr');
+      var ca = document.createElement('td');
+      var cb = document.createElement('td');
+      var ta = document.createTextNode(a);
+      var tb = document.createTextNode(b);
+      var t  = document.getElementById('tbl');
+
+
+      ca.appendChild(ta);
+      cb.appendChild(tb);
+
+      r.appendChild(ca);
+      r.appendChild(cb);
+
+      t.tBodies(0).appendChild(r);
+    }
+
+  </script>
+
+</head>
+<body>
+
+   <form>
+      Column A: <input type=text name=a>
+  <br>Column B: <input type=text name=b>
+  <br><input type=button value='add Row' onClick='javascript:addRow(a.value, b.value)'>
+
+   </form>
+
+   <table id=tbl>
+     <tr><td>Column A</td><td>Column B</td></tr>
+   </table>
+
+</body>
+</html>

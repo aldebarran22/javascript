@@ -1,0 +1,1 @@
+callback({nombre:"Andrea", ciudad:"Nueva York"});

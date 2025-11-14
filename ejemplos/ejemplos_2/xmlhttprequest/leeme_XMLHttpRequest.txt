@@ -1,0 +1,8 @@
+Si obtenemos un error al instanciar el objeto: XMLHttpRequest 
+tenemos que instalarlo con npm
+
+npm install xhr2
+npm install xhr
+
+En el módulo de JS hay que hacer: 
+var XMLHttpRequest = require('xhr2')

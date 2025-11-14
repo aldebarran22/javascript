@@ -1,0 +1,22 @@
+<form>
+Convierte a real:
+	<input type="text" name="float">
+<br>
+<input type="button" value=" Convierte " 
+	onClick="this.form.float.value=parseFloat(this.form.float.value)">
+</form>
+
+
+Introducir entero:
+	<input type="text" name="int">
+<br>
+<INPUT type="radio" name="conversion" value="decimal" 
+		onClick="this.form.int.value=parseInt(this.form.int.value, 10)">
+		Expresar entero en decimal<br>
+<INPUT type="radio" name="conversion" value="hexadecimal"
+		onClick="this.form.int.value=parseInt(this.form.int.value, 16)">
+		Expresar entero en hexadecimal<br>
+<INPUT type="radio" name="conversion" value="octal"
+		onClick="this.form.int.value=parseInt(this.form.int.value, 8)">
+		Expresar entero en octal<br>
+</form>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FOROS SYSTEM "foro.dtd">
+<FOROS>
+	<FORO fecha="1/8/2007">
+		<tema>programacion</tema>
+		<moderador>
+			<nombre>juan</nombre>
+			<email>juan@yahoo.com</email>
+			<icono></icono>
+		</moderador>
+		<preguntas>
+			<pregunta>
+				<titulo>enviar un email desde javascript</titulo>
+				<autor>
+					<nombre>altair</nombre>
+					<email>altair@gmail.com</email>
+					<icono></icono>
+				</autor>
+				<fecha>18/8/2007</fecha>
+				<contenido>hola, estoy haciendo una aplicación web que recoje una serie de datos del usuario a través de un formulario y enviarlos por email utilizando javascript, muchas gracias</contenido>
+				<respuestas>
+					<respuesta>
+						<autor>
+							<nombre>citris</nombre>
+							<email>citris@gmail.com</email>
+							<icono></icono>
+						</autor>
+						<fecha>19/8/2007</fecha>
+						<contenido>hola altair, aqui lo tienes:</contenido>
+						<contenido><![CDATA[function enviaMail(){]]></contenido>
+						<contenido><![CDATA[parent.location.href='mailto:'+dir+'?subject='+tema+'&body='+cuerpo;]]></contenido>
+						<contenido><![CDATA[}]]></contenido>
+						<contenido>espero que te sirva</contenido>
+						<contenido>saludos</contenido>
+					</respuesta>
+				</respuestas>
+			</pregunta>
+			<pregunta>
+				<titulo>xml</titulo>
+				<autor>
+					<nombre>citris</nombre>
+					<email>citris@terra.es</email>
+					<icono></icono></autor>
+				<fecha>9/9/2007</fecha>				
+				<contenido>hola, ¿como se adjunta a un fichero xml una hoja de estilos?</contenido>
+				<respuestas>
+					<respuesta>
+						<autor>
+							<nombre>tropic</nombre>
+							<email>j_g_hares@gmail.com</email>
+							<icono></icono>
+						</autor>
+						<fecha>12/9/2007</fecha>
+						<contenido>aqui tienes un ejemplo, sería la 2ª linea de tu fichero xml</contenido>
+						<contenido><![CDATA[
+										<?xml-stylesheet href="tu_fichero.css" type="text/css"?> 
+									]]></contenido>
+					</respuesta>
+				</respuestas>
+			</pregunta>
+			<pregunta>
+				<titulo>macros en vba-excel</titulo>
+				<autor>
+					<nombre>menkar</nombre>
+					<email>menkar@gmail.com</email>
+					<icono></icono>
+				</autor>
+				<fecha>25/9/2007</fecha>				
+				<contenido>hola, alguien sabe como funciona el bucle for ... each de vba</contenido>
+			</pregunta>			
+		</preguntas>
+		</foro>
+		<foro fecha="1/8/2007">
+		<tema>motor</tema>
+		<moderador>
+			<nombre>pepe</nombre>
+			<email>pepe@yahoo.com</email>
+			<icono></icono>
+		</moderador>
+		<preguntas>
+			<pregunta>
+				<titulo>mundial de formula 1</titulo>
+				<autor>
+					<nombre>craken</nombre>
+					<email>rr_tnt@terra.es</email>
+					<icono></icono></autor>
+				<fecha>1/9/2007</fecha>
+				<contenido>¿Quien cree que va a ganar alonso el mundial?</contenido>
+				<respuestas>
+					<respuesta>
+						<autor>
+							<nombre>menkar</nombre>
+							<email>menkar@yahoo.es</email>
+							<icono></icono>
+						</autor>
+						<fecha>1/9/2007</fecha>
+						<contenido>yo estoy de acuerdo, seguro que al final gana</contenido>
+					</respuesta>
+					<respuesta>
+						<autor>
+							<nombre>citris</nombre>
+							<email>citris@yahoo.com</email>
+							<icono></icono>
+						</autor>
+						<fecha>3/9/2007</fecha>
+						<contenido>yo no, estoy de acuerdo, va a ganar hamilton</contenido>
+						<respuesta>
+							<autor>
+								<nombre>cactus</nombre>
+								<email>cactus@yahoo.com</email>
+								<icono></icono>
+							</autor>
+							<fecha>6/9/2007</fecha>
+							<contenido>yo creo que hamilton, no gana, mira lo del otro dia</contenido>
+								<respuesta>
+									<autor>
+										<nombre>morfeo</nombre>
+										<email>morfeo@yahoo.com</email>
+										<icono></icono>
+									</autor>
+									<fecha>16/9/2007</fecha>
+									<contenido>dejaros de rollos, va a ganar alonso</contenido>
+									<respuesta>
+										<autor>
+											<nombre>menkar</nombre>
+											<email>menkar@yahoo.com</email>
+											<icono></icono>
+										</autor>
+										<fecha>16/9/2007</fecha>
+										<contenido>al final gana raikoner</contenido>
+									</respuesta>									
+								</respuesta>
+						</respuesta>
+					</respuesta>
+				</respuestas>
+			</pregunta>
+		</preguntas>
+	</foro>
+</FOROS>

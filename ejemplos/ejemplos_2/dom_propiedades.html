@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.onload = () => {
+            console.log("document: " + document.nodeType)
+            let h1 = document.getElementById("principal")
+            let p = document.getElementById("parrafo")
+
+            console.log("h1: name: " + h1.nodeName + " type: " + h1.nodeType + " value: " + h1.nodeValue)
+            console.log("p: name: " + p.nodeName + " type: " + p.nodeType + " value: " + p.nodeValue)
+
+            console.log("El texto de h1: "+h1.firstChild.nodeValue + " type: " + h1.firstChild.nodeType)
+            console.log("El texto del parrafo: "+p.firstChild.nodeValue + " type: "+p.firstChild.nodeType)
+
+            // Prueba obtener los nodos hijos de document: 
+            console.log('Hijos de document:')
+            let hijos = p.childNodes
+            for (let h of hijos){
+                console.log(h.nodeName + " " + h.nodeValue)
+                if (h.hasChildNodes()){
+                    let nietos = h.childNodes
+                    for (let n of nietos)
+                    console.log(n.nodeName + " " + n.nodeValue + " parentNode: " + n.parentNode.nodeName)                    
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1 id="principal">Titulo</h1>
+    <p id="parrafo">Nombre de la persona <strong>Ismael</strong></p>
+</body>
+</html>

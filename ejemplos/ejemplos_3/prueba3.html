@@ -1,0 +1,11 @@
+<form>
+Introducir carácter en formato URL o normal:
+	<input type="text" name="char" size=5>
+<br>
+<INPUT type="radio" name="codificacion" value="normal" 
+		onClick="this.form.char.value=escape(this.form.char.value)">
+		formato estándar a URL<br>
+<INPUT type="radio" name="codificacion" value="URL"
+		onClick="this.form.char.value=unescape(this.form.char.value)">
+		formato URL a estándar<br>
+</form>

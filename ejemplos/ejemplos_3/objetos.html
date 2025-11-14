@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+	function Persona(nombre, apellidos, edad) {
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.edad = edad;
+		this.displayEdad = function() {
+			alert("La edad es " + this.edad);
+		}
+	}
+
+	var  o = new Persona("aa","bb",9);
+	o.sexo = "m";
+	o.displayEdad();
+	console.log(o.sexo);
+	
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+<meta charset=UTF-8" />
+	<title>VISOR DE FOTOS</title>
+	<style>				
+		
+		#contenedor {
+			width: 40%;
+			margin: 50px auto;
+			text-align: center;	
+			border: 5px solid #DDDDDD;
+		}
+		
+		ul li {
+			list-image-type: none;
+			display: inline;
+			margin: 0px 30px;
+		}	
+		
+		ul li a {
+			text-decoration: none;
+		}
+		
+		ul li a:HOVER {
+			text-decoration: underline;
+		}
+		
+		/* LA PROPIEDAD display:block muestra la capa, y display:none la oculta  */
+		
+		#foto1 {
+			display: block;
+		}
+		
+		#foto2 {
+			display: none;
+		}
+		
+		#foto3 {
+			display: none;
+		}
+		
+		#foto4 {
+			display: none;
+		}			
+	
+	</style>
+	<script>
+		
+								
+	</script>
+</head>
+
+<body>
+	<div id="contenedor">		
+		<h2>VISOR DE DIAPOSITIVAS</h2>
+		<ul>
+			<li><a href="#">FOTO 1</a></li>
+			<li><a href="#">FOTO 2</a></li>
+			<li><a href="#">FOTO 3</a></li>
+			<li><a href="#">FOTO 4</a></li>
+		</ul>
+		<div id="diapositivas">			
+			<div id="foto1">
+				<figure>
+					<img src="img/1.jpg" />
+					<p>FOTO 1</p>
+				</figure>
+			</div>
+			<div id="foto2">
+				<figure>
+					<img src="img/2.jpg" />
+					<p>FOTO 2</p>
+				</figure>
+			</div>
+			<div id="foto3">
+				<figure>
+					<img src="img/3.jpg" />
+					<p>FOTO 3</p>
+				</figure>
+			</div>
+			<div id="foto4">
+				<figure>
+					<img src="img/4.jpg" />
+					<p>FOTO 4</p>
+				</figure>
+			</div>
+		</div>	
+	</div>
+</body>
+</html>

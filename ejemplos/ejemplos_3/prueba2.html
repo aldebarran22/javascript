@@ -1,0 +1,19 @@
+<SCRIPT>
+	function Comprueba(form){
+		var number = parseFloat(form.valor.value);
+		if (isNaN(number)==true)
+			alert("No es numérico");
+		else
+			form.valor.value = number;
+			alert("Es numérico");
+	}
+</SCRIPT>
+
+...
+
+<form>
+Introducir un valor numérico:
+	<input type="text" name="valor">
+<br>
+<input type="button" value=" Comprobar " onClick="Comprueba(this.form)">
+</form>

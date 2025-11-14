@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONP Demo</title>
+
+    <script type="text/javascript">
+
+        window.onload = function() {
+
+            var num = Math.round(100000 * Math.random());
+            var callbackMethodName = "cb_" + num;
+            
+            window[callbackMethodName] = function (data){
+                console.log(data);
+            }
+
+            var sc = document.createElement("script");
+            sc.id = "script_" + callbackMethodName;
+            sc.src = "https://www.dpii.es/practicas/funciones1.php?callback="+callbackMethodName;
+            
+            document.body.appendChild(sc);
+            document.getElementById(sc.id).remove();
+        };
+        
+
+    </script>
+
+    <!--<script type="text/javascript" src="test_jsonp.js">-->  
+    <!--     
+    <script type="text/javascript" src="http://www.dpii.es/practicas/funciones1.php?callback="+callbackMethodName>       
+    </script>-->
+</head>
+<body>
+    
+</body>
+</html>

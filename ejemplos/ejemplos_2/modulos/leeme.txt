@@ -1,0 +1,2 @@
+Para crear el fichero package.json se puede crear con npm:
+npm init -y

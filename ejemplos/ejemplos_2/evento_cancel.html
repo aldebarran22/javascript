@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        function enviar(){
+            let nombre = document.getElementById("nombre").value
+            if (nombre == ''){
+                alert('Nombre vacío. No se puede continuar')
+                return false
+
+            } else {
+                let datos = document.getElementById("formulario")
+                datos.action = "pagina.php"
+                datos.submit()
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Cancelación evento submit de un formulario</h3>
+    <form id="formulario" method="post" action="#" onsubmit="return enviar()">
+    Nombre: <input type="text" name="nombre" id="nombre">
+    <input type="submit" name="submit" value="Enviar form.">
+    </form>
+</body>
+</html>

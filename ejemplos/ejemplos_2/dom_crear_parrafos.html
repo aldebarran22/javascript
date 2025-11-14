@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        function insertarParrafo(texto){
+            let parrafo = document.createElement("p")
+            let nodo_texto = document.createTextNode(texto)
+
+            // Vincular el nodo de texto al parrafo
+            parrafo.appendChild(nodo_texto)
+
+            // Vincular el parrafo al body
+            document.body.appendChild(parrafo)
+        }
+
+        window.addEventListener("load", () => {
+            const nombres = ['Alberto','Gema','Dolores','Ismael','Javier','Sonia']
+            let boton = document.getElementById('boton')
+            boton.addEventListener("click", () => {
+                for (let x of nombres)
+                    insertarParrafo(x)            
+            }, false)       
+        }, false)
+    </script>
+</head>
+<body>
+    <h3>Añadir párrafos con el DOM</h3>
+    <input type="button" id="boton" value="Crear párrafos">
+</body>
+</html>
